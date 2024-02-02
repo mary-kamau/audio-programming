@@ -1,0 +1,137 @@
+pitch detection, harmonic modeling, and waveform synthesis.
+
+Pitch Detection:
+Map to frequency and appy fourier
+
+Timbre and Harmonic Content:
+
+Attack and Decay Characteristics:
+Capture the percussive attack and decay of guitar notes. Adjust these characteristics to match the quicker attack and shorter decay typical of piano notes.
+
+Sustain and Release:
+Model the sustain and release phases of the piano sound. Pianos have the ability to sustain notes for a more extended period, especially when using the sustain pedal. Adjust the guitar sound to simulate this effect.
+
+Polyphony Handling:
+Consider how your algorithm handles polyphony (multiple notes played simultaneously). Pianos are polyphonic instruments, so your conversion process should account for and accurately handle multiple concurrent notes.
+
+Dynamic Range:
+Pianos have a wide dynamic range, allowing for both soft and loud playing. Adjust the dynamic characteristics of the guitar sound to match the piano's expressive range.
+
+Velocity Sensitivity:
+Pianos are velocity-sensitive, meaning the force with which a key is struck affects the volume and often the tonal characteristics. Implement velocity sensitivity in your conversion process to capture the dynamics of piano playing.
+
+Resonance:
+Consider modeling sympathetic resonances that occur in a piano. When certain notes are played, other related strings can vibrate sympathetically, contributing to the overall sound. Simulating this effect can enhance the realism of the piano sound.
+Pedal Effects:
+If applicable, model the effects of piano pedals, especially the sustain pedal. The sustain pedal allows notes to resonate and adds to the sustain phase of piano sound.
+
+Note Transitions:
+Smoothly handle transitions between notes. Pianos have unique characteristics in how one note transitions to the next, and your conversion should reproduce these transitions faithfully.
+
+
+
+PROCESSES
+
+Pitch Detection:
+Method: Crepe
+
+Timbre and Harmonic Content:
+Method: Spectral Analysis (e.g., FFT - Fast Fourier Transform)
+Description: Extract the frequency content of the audio signal to identify the harmonics and their amplitudes. Mel-Frequency Cepstral Coefficients (MFCCs) can also be used to capture timbral characteristics.
+
+Attack and Decay Characteristics:
+Method: Envelope Extraction
+Description: Use methods such as ADSR (Attack, Decay, Sustain, Release) envelope extraction to identify the onset and decay of each note.
+
+Sustain and Release:
+Method: Envelope Extraction, Sustain Modeling
+Description: Apply envelope extraction to model sustain and release phases. Additionally, consider modeling sustain using algorithms that simulate string resonance or sympathetic vibrations.
+
+Polyphony Handling:
+Method: Polyphonic Pitch Detection
+Description: Extend pitch detection algorithms to handle multiple concurrent notes, enabling polyphonic pitch tracking.
+
+Dynamic Range:
+Method: Dynamic Range Compression/Expansion
+Description: Apply dynamic range compression or expansion to adjust the volume levels, ensuring a wide dynamic range suitable for piano-like expression.
+
+Velocity Sensitivity:
+Method: Velocity Sensitivity Mapping
+Description: Implement velocity sensitivity by mapping the force or speed of the guitar note to the intensity of the synthesized piano note.
+
+Resonance:
+Method: Physical Modeling, Resonance Filtering
+Description: Use physical modeling techniques to simulate sympathetic resonances. Apply filters to mimic the resonant frequencies of piano strings.
+
+Pedal Effects:
+Method: Pedal Modeling
+Description: Implement algorithms to simulate the effects of piano pedals, such as sustain. Modify the decay and sustain parameters accordingly.
+
+Note Transitions:
+Method: Transition Modeling
+Description: Develop algorithms to handle smooth transitions between notes. Consider techniques like crossfading or applying specialized algorithms for legato playing.
+
+
+OUTPUTS
+
+Pitch Detection (YIN):
+Output: Estimated pitch frequency for each note in the guitar input.
+
+Timbre and Harmonic Content (Spectral Analysis):
+Output: Frequency spectrum information, including amplitudes and frequencies of harmonics. Optionally, Mel-Frequency Cepstral Coefficients (MFCCs) can be extracted to capture timbral characteristics.
+
+Attack and Decay Characteristics (Envelope Extraction):
+Output: Envelope information for each note, indicating the attack and decay phases.
+
+Sustain and Release (Envelope Extraction, Sustain Modeling):
+Output: Envelope information representing the sustain and release phases. Additional sustain modeling may involve parameters that influence how notes sustain over time.
+
+Polyphony Handling (Polyphonic Pitch Detection):
+Output: Polyphonic pitch information, indicating the pitches of multiple concurrent notes.
+
+Dynamic Range (Dynamic Range Compression/Expansion):
+Output: Processed audio with adjusted dynamic range to ensure a wide range of soft and loud volumes.
+
+Velocity Sensitivity (Velocity Sensitivity Mapping):
+Output: Processed audio with velocity-sensitive intensity, reflecting the force or speed of the original guitar playing.
+
+Resonance (Physical Modeling, Resonance Filtering):
+Output: Processed audio with added resonance effects, simulating sympathetic vibrations or resonances.
+
+Pedal Effects (Pedal Modeling):
+Output: Processed audio with simulated pedal effects, such as sustained notes or modified decay characteristics.
+
+Note Transitions (Transition Modeling):
+Output: Processed audio with smooth transitions between notes, accounting for legato playing or other transition effects.
+
+USE IN PROCESS
+
+Pitch Detection (Crepe):
+Use the estimated pitch frequencies to map each guitar note to its corresponding piano note. Adjust pitch values as needed to match the piano's pitch range.
+
+Timbre and Harmonic Content (Spectral Analysis):
+Use the harmonic content information to modify the spectrum of each guitar note. Apply filters or transformations to shape the harmonics, aiming for a piano-like frequency distribution.
+
+Attack and Decay Characteristics (Envelope Extraction):
+Implement the attack and decay information in the synthesis process. Adjust the amplitude envelope of each note to match the percussive attack and decay characteristics of a piano.
+
+Sustain and Release (Envelope Extraction, Sustain Modeling):
+Integrate sustain and release information into the synthesis process. Modify the amplitude envelope during the sustain and release phases to simulate piano-like sustain and decay.
+
+Polyphony Handling (Polyphonic Pitch Detection):
+Extend the synthesis process to handle multiple concurrent notes. Ensure that polyphonic interactions are accurately modeled, and each note contributes to the overall sound.
+
+Dynamic Range (Dynamic Range Compression/Expansion):
+Apply dynamic range adjustments to the synthesized notes to match the wide dynamic range of a piano. Ensure that soft and loud playing is well-represented.
+
+Velocity Sensitivity (Velocity Sensitivity Mapping):
+Use the velocity sensitivity information to control the intensity of each note. Modify the amplitude of the synthesized notes based on the original guitar playing dynamics.
+
+Resonance (Physical Modeling, Resonance Filtering):
+Integrate resonance effects into the synthesis process. Simulate sympathetic resonances or other resonance characteristics that contribute to the richness of piano sound.
+
+Pedal Effects (Pedal Modeling):
+Implement pedal effects in the synthesis process. Simulate sustain pedal effects by extending the duration of sustained notes or modifying the decay characteristics during sustained periods.
+
+Note Transitions (Transition Modeling):
+Smoothly handle transitions between notes using the transition information. Apply techniques like crossfading or legato playing modeling to achieve natural note transitions.

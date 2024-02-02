@@ -1,0 +1,30 @@
+pitch detection, harmonic modeling, and waveform synthesis.
+
+Pitch Detection:
+Map to frequency and appy fourier 
+Timbre and Harmonic Content:
+
+
+Attack and Decay Characteristics:
+
+Capture the percussive attack and decay of guitar notes. Adjust these characteristics to match the quicker attack and shorter decay typical of piano notes.
+Sustain and Release:
+
+Model the sustain and release phases of the piano sound. Pianos have the ability to sustain notes for a more extended period, especially when using the sustain pedal. Adjust the guitar sound to simulate this effect.
+Polyphony Handling:
+
+Consider how your algorithm handles polyphony (multiple notes played simultaneously). Pianos are polyphonic instruments, so your conversion process should account for and accurately handle multiple concurrent notes.
+Dynamic Range:
+
+Pianos have a wide dynamic range, allowing for both soft and loud playing. Adjust the dynamic characteristics of the guitar sound to match the piano's expressive range.
+Velocity Sensitivity:
+
+Pianos are velocity-sensitive, meaning the force with which a key is struck affects the volume and often the tonal characteristics. Implement velocity sensitivity in your conversion process to capture the dynamics of piano playing.
+Resonance:
+
+Consider modeling sympathetic resonances that occur in a piano. When certain notes are played, other related strings can vibrate sympathetically, contributing to the overall sound. Simulating this effect can enhance the realism of the piano sound.
+Pedal Effects:
+If applicable, model the effects of piano pedals, especially the sustain pedal. The sustain pedal allows notes to resonate and adds to the sustain phase of piano sound.
+Note Transitions:
+
+Smoothly handle transitions between notes. Pianos have unique characteristics in how one note transitions to the next, and your conversion should reproduce these transitions faithfully.

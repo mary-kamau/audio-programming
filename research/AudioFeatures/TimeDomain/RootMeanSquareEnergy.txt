@@ -1,0 +1,28 @@
+- Takes the root mean square of all the sampes in a frame
+- Check formula screenshot
+RMSt - Root Mean Square Energy at frame t
+K - All Samples in frame
+s(k) squared - Energy of the kth sample
+
+(t+1)* K-1
+Σ           - Sum of energy for all samples in frame t
+k=t.k
+       
+        (t+1)* K-1
+1/K   *      Σ           - mean of sun of energy
+        k=t.k
+               
+                    
+                            (t+1)* K-1
+RMSt = square root  1/K   *      Σ     
+                             k=t.k     
+
+- Root mean square energy is an indicator of loudness
+- Less sensitive to Outliers than AE as it considers all the samples  
+
+Applications
+- Identifying new segments in an audio signal ( Audio Segmantation)
+- Music genre classification
+
+
+

@@ -1,0 +1,3 @@
+Amplitude Envelope(AE)
+Root-mean-square energy (RMS)
+Zero-crossing rate (ZCR)

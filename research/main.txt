@@ -1,0 +1,30 @@
+#Applications
+#   - Audio Classification
+    # - Speechrecognition / speaker verification
+    # - Audio denoising / audio upsampling
+    # - Music Information Retrieval
+    #        - Instrument Classification
+    #        - Mood Classification
+
+#Content
+# Sound Waves
+# Digital to Analog Convertrs / Analog to Digital Converters
+# Time and Frequency DOmain audio Features (e.g., rms, spectral centroid)
+# Audio transformations
+#     - Fourier Transform / STFT
+#     - Constant-Q Transform
+#     - Mel Spectograms
+#     - Chromograms
+
+#Outline
+#   - Deep understanding of audio data
+    # - Familiarise with frequency/time-domain audio features
+    # - Extract features from raw audio
+    # - Recognise what audio features to use for ML applications
+    # - Preprocess audio data for ML
+    # - Understand math behind audio transformations
+    # - Use librosa for audio proects
+
+# thesoundofai.slack.com
+
+

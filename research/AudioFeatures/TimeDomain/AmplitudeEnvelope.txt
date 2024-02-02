@@ -1,0 +1,24 @@
+- This is the max amplitude value taken out of all the samples in a frame
+AEt = amplitude envelop at frame t
+K - frame size (total number of samples in the given frame)
+k = t. K (first sample frame t)
+(t+1) * K -1 - last sample of frame t
+s(K) - amplitude of sample k
+check screenshot for Amplitude envelop formula
+Calculate AE for all frames
+
+       (t+1) . K-1
+AEt =      max       s(K)
+        k=t.K
+
+- For each frame take the highest (max) value of the amplitude
+
+- Amplitude Envelope gives us a rough idea of the loudness of the signal
+- Sensitive to Outliers as one is getting the amplitude for one sample out of all samples in a frame
+- Amplitude Envelopes is used in:
+  Onset detection (e.g when one note starts)
+  Music genre classification
+  
+Implement amplitude Envelope
+Visualise amplitude enevlope fro different music genres
+

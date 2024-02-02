@@ -1,0 +1,82 @@
+Convert Analog Signal to Digital Audio Signal
+
+An audio signal is a represenation of sound
+It encodes all the info we need to reproduce sound
+
+Analog signal 
+Conttinous vaues for time
+Contibous values of amplitude
+
+Digital Signal
+Sequence of discrete values
+Data points can ony take on a finite number of values
+
+Analog to Digital Conversion 
+Consists of :
+Sampling
+Quantization
+Output is an audio digittal signal also known as pulse-code modulation
+
+Sampling
+- Sample dataponts across a sound wave at specific points in time
+- We sample by deciding on a period and we sample at equidistant intervals in time
+- How do we locate samples on time:
+ tn = n. T (time where we have sample number n)
+ check screenshot
+
+Sampling rate
+This is the inverse of period T
+Sr = 1/T
+It is a frequency (Hz)
+It indicates the number of samples we have for each second of the digital signal
+Check low vs high sample rate screenshot
+Low sample rate means that the smapling period is higher, that is the interval between samples
+Sampling error - There's a difference between the area below the curve and the area created by the vertical bars, this difference is the sampling error that is the information that we loose when sampling
+The higher the sample rate the lower te sampling error.
+Why sampling rate fro CD = 44100Hz?
+
+Nyquist Frequency
+   fN = Sr/2
+
+Check screenshot
+
+It tells us the upper bound frequency that we can have in a digital signal that's not going to recreate any artifacts
+Up until the nyquist frequency we can create a signal but above that we have artifacts
+fN = 44100/2 = 22050Hz
+This means that we can appreciate the whole frequecy range without artifacts
+What are the artifacts?
+Artifacts inected in a signal if we have frequencies that are above the Nyquist frequency are determined by Aliasing
+
+Aliasing
+- Check screenshot
+- It shifts down all frequencies above the Nyquist Frequency
+
+Quantization
+- Check screenshot
+Quantization samples on the y axis, i.e amplitude
+The idea is that we have a fixed discrete number of amplitude vaues on y axis
+At each sample we quantize the value of amplitude to the closest value we have available on the y axis.
+Apply quantization creates a quantization error.
+The higher the quantoization resolution the lower the quantization error
+- Values are binary values(4 bits) as the signal is stored in digital computers
+Resolution = numbe rof bits  also known as Bit Depth
+- CD resolution is 16 bits (Bit depth = 16 bits)
+2 raised to power 16 giving 65536Hz
+These are all the posiible valyes tat can be used when we quantize an anlog signal in a CD
+Check the amount of Hard Disk memory for 1 minute of sound expressed in MB,
+- Depends on ampling rate = 44100Hz
+- Bit depth = 16 bits
+(((16*44, 100) / 1, 048, 576)/8) * 60 = 5.49MB
+
+Dynamic range
+- Difference between largest/smallest signal a system can record
+- The higher the resolution the higher the dynamic range
+
+Signal-to-quantization-noise ratio
+- This is the relationship between max signal strength and quantization error
+- Measured in decibles
+- Correlates with Dynamic
+
+    SQNR =  6.02 * Q where Q is the bit depth
+
+check screenshot

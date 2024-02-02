@@ -1,0 +1,78 @@
+Time Domain Features
+Frequency Features
+Audio Features
+Audio Features are descripters of sound. They provide information about different aspects oof sound
+Characterised by:
+ - Level of abstraction
+ - Temporal scope
+ - Music aspects
+ -Signal Domain
+ - ML Approach
+
+1. Level of abstraction
+
+- Divided into:
+1.High level ( instrumentation, key, chords, melody, rhythm, tempo, lyrics, genre, mood)
+- Vey abstract features that map to musical costructs tha can be perceived 
+2. Mid-level ( pitch and beat related descriptors such as note onsets, flanctuation patterns, MFCCs)
+- 
+3.Low-level(amplitude envelope, energy, spectral centroid, spectral flux, zeroo-crossing rate)
+- These are features that make sense for machines not human being.
+they re statistical features that get extracted from the Audio
+
+2. Temporal scope
+
+- This is a strategy for categorising audio features. It applies to many types of sound (music and non music)
+1. Instantaneous ( about 50ms)
+- Give instat info about audio Signalconsiders very shor chunks of audio Signal
+2. Segment-level (seconds)
+- Audio features that can be calculated in segments of audio
+- Features that give us information about a bar or phrase. Somehing that makes sennse in a musical context
+3. Global
+- Give us information about the whole sound.
+- Are like aggregate features.
+
+3. Music aspects
+
+- Beat, Timbre, Pitch, Harmony
+- Note onset relates to beat or melody
+- Key relates to harmony and pitch
+
+4. Signal Domain
+
+4. Time Domain
+
+- Time Domain Features (Amplitude envelope, Root-mean square energy, Zero crossing rate)
+- They are time domain features since they are extracted from the waveform.
+- The time domain is captured in a waveform ( the x axis is time and the y axis is amplitude)
+
+5. Frequency Domain
+
+- Sound is characterised by frequency
+- These focus on frequency components ( Band Energy ratio, Spectral centroid, spectral flux)
+- What is the frequency domain? How do we get it?
+- Take the raw audio, apply Fourrier Transform and translate the signal from the time domain to the frequency domain.
+- This returns a spectrum (x axis frequency, y axis magnitude)
+check screenshot
+
+6. Time-Frequency Domain features
+
+- These focus on both time and frequency they are ( Spectrogram, Mel-spectrogram, Constant-Q transform)
+- We can get the spectrogram by taking the time domain representation and apply Short Time Fourier Transform.
+
+7. ML Approach
+
+- Traditional Machine Learning (Looks at all audio features)
+Amplitude envelope
+Root-mean square energy
+Zero crossing rate
+Band energy ratio
+Spectral centroid
+Spectral flux
+Spectral spread
+Spectral roll-off
+
+- Deep Learning
+- Pass unstructerd audio reppresentation e.g raw audio, pass spectrogram lke audio features
+
+

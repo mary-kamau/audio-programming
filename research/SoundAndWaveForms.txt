@@ -1,0 +1,69 @@
+# Sound is produced by vibrating obects. Vibrations cause air molecules to oscillate. These air molecules then cause change in air pressure in the region they're acting thus creating a wave.
+#Sound is a wave that transmits some energy from oe point to another through air molecules.
+#Sound is a mechnaical wave.
+#A mechanical wave is an oscillation that travels through space. Energy travels from one point to another.Mechanical waves need a medium through which wave can expad and propagate through.
+#In sound the medium is air
+# Waveform
+#Carries multifactorial information
+# - Frequency
+# - Intensity
+# - Timbre
+#Sound can be divided into :
+    Periodic Sound
+    Aperiodic Sound
+Periodic Sound is where the Compressions and Rarefactions repeat regularly
+   - Single Sine Waveform
+   - Complex Sound (Multiple Sinewaves)
+
+Aperiodic Sound
+   - No periodicity
+   - Continous Waveform ( Dont follow any pattern i the air pressure (Noise))
+   - Transient (Pulse)
+
+Waveform for sinple Sine wave 
+    y(t) = Asin(2πft + φ)
+A = amplitude
+f = frequency
+t = time
+φ  = phase
+
+Frequency ( f )
+Frequency is connected with period which is the amount of time needed to elapse before having two picks or two dips. 
+Frequency is the inverse of the period 1/T. 
+It is expressed in Hz that is number of cycles per second
+
+Amplitude ( A )
+Amplitude is how high or low the change in pressure goes.
+
+Phase ( φ )
+Phase enables us to shift the waveform to the right or to the left.
+It tells us what is the position of the waveform at time 0
+
+- The higher the frequency the higher the sound that is perceived (shorter period)
+- The larger the amplitude the louder the sound
+
+Hearing Range
+-Humans hearing range between 20Hz - 20,000Hz
+
+Pitch
+- Pitch is used in the perception of frequency
+- Logarithm perception
+- 2 frequencies are perceive to be the same if they differ by a power of 2 ( Octave )
+
+Mappig pitch to frequency
+
+F(p) = 2 raised to the power of (p-69)/12 x 440
+
+Check screenshot
+
+What is the relaionship between two subsequent pitches?
+
+F(p +1) / F(p) = 2 raised to power (1/12) 
+
+
+Cents
+
+Octave is divided into 1200 Cents
+100 cents in a semitone
+Noticable pithc difference 10-25 cents
+

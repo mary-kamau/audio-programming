@@ -1,0 +1,69 @@
+Extracting Time and Frequency Domain Features
+
+Time Domain Features
+
+1. Get sound
+2. Sample and Quantize through ADC to get a digital signal
+3. Framing (bundle together a bunch of samples)
+
+check screenshot
+frame 1: sample 1 ... 128
+frame 2:sample 64 ... 192
+frame 3: sample 128 ... 256
+frame 4: saple 192 ... 320
+- Frames a4re overlapped
+- Fraes are audio chunks that are percievable
+1 sample @ 44.1KHZ = 0.0227ms (1/44100)
+Human hear can't hear sound below 10ms
+Framing gives enough time of an audi signal so we can hear
+Frames have a frame zize (number of samples) hat is usually a power of 2 this enables the applcation of the Fast Fourier Transform to pefrom faster
+Typical values are between 256-8192
+df = 1/Sr .K
+Duration of a frame
+ = Inverse of sampling rate multiplied by frame size
+Sr = sample rate
+K = total samples
+
+4. Compute time domain features on each of the frames
+5.Aggregate the result for thewhole sound( mean, median, GMM)
+6 Output is a feature value/vector or matrix
+
+Frequency Domain Featires
+
+1. Get sound
+2. Sample and Quantize through ADC to get a digital signal
+3. Framing (bundle together a bunch of samples)
+4. Windowing
+Move from time domain to frequency domain that is Fourier transform (from time representation to frequency representation )
+However there maybe a problem known as Spectral Leakage.
+This happens when processing a signal that isnt an integer number of periods
+The endpoints of a signal are discontinued as they're not an integer number of periods.
+Discontinuities appear as high frequency components yet they dont exist in the original signal
+- Some of these discontinuities leak into other higher frequencies thus spectral Leakage
+- Spectral leakage can be minimised using windowing
+
+- Apply a windowing function to each frame before passing to Fourier Transform
+- Eliminates samples at both ends of a frame
+- This generates a periodic signal that minimizes spectral leakage
+
+Hann Window
+- This is a function of the samples
+Check screenshot for Hann Window formula
+
+Sw (K) = s(k) . w(k). k = 1 ...k
+
+we ultiply the original signal by the hann window at each correspondent sample
+Check screenshot for Windowing formula
+Check screenshot of result of windowing 
+
+5. Overlapping Frames
+However this results in another problem when all the frames are put together, at the beginning and end of every frame we loose signal from windowing
+check screenshot of tis problem
+This is solved by overlapping frames
+Frame size (K)
+Hop Length / hop size - tells the amount of samples we shift to the right every time we take a new frame
+
+6. Fourier
+7. Coompute frequency domain features on each frame
+8.Aggregate the result for thewhole sound( mean, median, GMM)
+9.Output is a feature value/vector or matrix

@@ -1,0 +1,105 @@
+Intesnsity, loudness and timbre
+
+Sound Power
+This is a physicla measure
+Rate at which energy is transferred
+Energy per unit of time emitted by a sound source in all directions across the medium (air)
+Measured in watt(W)
+
+Sound intensity is sound power per unit area
+Measured in W/m squared
+
+Threshold of hearing (TOH)
+Humans can perciev sounds wth very small intensitites
+TOH = 10 raised to the power of -12 W/m squared
+
+Threshold of pain (TOP)
+TOP = 10 . W/m squared
+
+Intesnity level
+Descrbes the intensity of sound
+Its put on a logarithmic scale
+Measured in decibels (dB)
+It is a ratio between two intensity values
+Use an intensity of refrence (TOH)
+
+Intensity level 
+
+dB(I) = 10 . log10(I/ITOH)
+
+Check Screenshot
+
+Whats 0 dB
+
+dB(ITOH) = 10. log10 (ITOH/ITOH) = 0
+check phone Screenshot
+
+- Everytime we go up by 3db the intensity doubles
+Intensity level Table
+check phone Screenshot
+
+(fundamentals of music processing by Muller )
+
+Loudness
+
+Subective measure of soound Intesnity
+
+Depends on age
+Measured in phons
+Loudness depends on the ratio and frequency of the sound
+At equal intensity We hear shorter sounds as less loud
+
+check Equal Loudness contours screenshot 
+
+Timbre
+
+Diffence between two sounds with the same intensity, frequency and duration (eg sam note on different instruments)
+It is multidimensional
+What are the features of timbre?
+
+- Sound Envelope
+- Harmonic content
+- Amplitude/ frequency modulation
+
+Sound Envelope
+- Attack-Decay-Sustain-Release Model (ADSR)
+-Chec screenshot
+- Sound usually has an envelop that can be divided by the ADSR model
+Attack- the amplitude has an initial spike 
+Decay - the sound stabilises 
+Sustain- the sound remains constant in amplitude
+Release - fading out phase of sound
+Different types of sounds have different envelopes based on music instrument
+Pano short attack, a transient little period of decay , long sustain and shprt release
+Violin has a longer attack in terms of time, no decay some sustain then the release
+
+Harmononic Content
+To understand harmonic content we need to understand what a complex sound is made up of
+A complex soud is made up of a superposition of many sinusoids(fundamental simple sounds)
+A partial is a sinusoid used to describe sound. Many different sinusoid superimposed together to for a complx sound are called partals, harmonic partial
+The lowest partial is called the fundamental frequency that gives a puith name to a note
+Harmonic partials is a frequency thats an integer multiple of the fundamental frequuency
+f1 = 440hz, f2 =2.440 = 880Hz, f3 = 3.440 = 1320
+first partial, second apartial, third partial
+Complex sound is madeup of these partials and the harmonic content tells us how much energy is there in ech of te partials thus determining timbre of the sound
+Inharmonicity indicates a devation from a harmonic partial
+
+Frequency modulation
+- Modulation in sound itself
+- Frequency modulation is called vibrato
+- Has periodic variaion in frequency
+- A vibrato effect is done with frequency modulation
+
+Amplitude Modulation
+- Known as tremolo
+- Periodic variation in amplitude
+
+Timbre Recap
+- Multifactorial sound dimension
+- Amplitude envelopes
+- Distribution of energy across partials
+- Signal modulation(frequency/amplitude)
+
+Sound Recap
+- Sound is a wave
+- Frequency, intensituy, timbrePitch, loudness, timbre

@@ -1,0 +1,30 @@
+- Indicates the number of times a signal crosses the horizontal axis
+check illustartion screenshot
+check formula screenshot
+- Compare the amplitude value for consecutive pairs of samples and look whether there there are differences in signs of those amplitudes for consecutve pairs of samples
+
+sgn - sign function (gives us bakck the sign of a given value 
+   s(k) > 0 -> +1
+   s(k) < 0 -> -1
+   s(k) = 0 -> 0
+   ) 
+
+sgn(s(k)) - sign for amplitude at sample k
+sgn(s(k + 1)) - sign for amplitude for sample (k+1) (consecutive sample)
+If we have both amplitude values that have the same sign, we get 0
+If we have alternate opposite signs we get a value of 2 
+
+
+               (t+1)* K-1
+ZCRt = 1/2 *       Σ      | sgn(s(k)) - sgn(s(k+1)) |
+                  k=t.k
+
+Sum over all the samples n a frame K  so as to get the value of all the zero crossings on a frame
+
+Applications
+
+- Recognition of percussive  vs pitched sounds
+- Monophonic pitch estimation (rudimentary) as there is a relation between number of zero crossings and the pitch
+If we have monohonic pitch then the higher the number of zerocrossings we have, the higheer the pitch is going to between
+- Voice/ unvoiced decision for speech signals
+Because in voice signals we have a lower zero crossing rates 
